@@ -198,8 +198,8 @@ def cyappend2(list lst, item, int count):
         </section>
         <section>
           <pre><code>
-$ cython -a mod2.pyx
-$ xdg-open mod2.html
+$ cython -a mod3.pyx
+$ xdg-open mod3.html
           </code></pre>
           <a href="https://asvetlov.github.io/optimization-kaunas-2017/mod3.html">HTML output</a>
         </section>
@@ -257,6 +257,9 @@ setup(name='prj',
       ext_modules=cythonize('prj/_mod.pyx'))
           </code></pre>
           <p>setup.py</p>
+          <pre><code>
+$ pip install -e .
+          </code></pre>
         </section>
         <section>
           <pre><code>
@@ -293,7 +296,6 @@ if _append is not None:
         </section>
         <section>
           <pre><code>
-$ pip install -e .
 # python -m unittest discover tests
 ..
 ----------------------------------------------------------------------
