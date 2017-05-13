@@ -48,7 +48,7 @@
           <h2>Prerequisites</h2>
           <ul>
             <li>There is Python code</li>
-            <li class="fragment">Profiler pointed on bottleneck</li>
+            <li class="fragment">Profiler points on bottleneck</li>
             <li class="fragment">The code is algorithmically perfect<br>
               <i>O(N) vs O(log(N))</i></li>
           </ul>
@@ -141,17 +141,13 @@ def cysum2(float start, float step, int count):
           <p><i>was 1.177 sec and 2.772</i></p>
         </section>
         <section>
-          <h1>Abstract vs Concrete types</h1>
-          <ul>
-            <li>PyObject_SetAttr</li>
-            <li>PySequence_GetItem</li>
-            <li>... vs ...</li>
-            <li>PyDict_GetItem</li>
-            <li>PyList_GetItem</li>
-            <li>PyTuple_GetItem</li>
-          </ul>
+          <pre><code>
+$ cython -a mod2.pyx
+$ xdg-open mod2.html
+          </code></pre>
+          <a href="https://asvetlov.github.io/optimization-kaunas-2017/mod2.html">HTML output</a>
         </section>
-<!-- ----------------------------------------------- -->
+        <!-- ----------------------------------------------- -->
         <section>
           <h1>Data structures</h1>
         </section>
@@ -189,7 +185,25 @@ def cyappend2(list lst, item, int count):
           <p>0.799 sec</p>
           <p><i>was 1.388 sec and 6.602</i></p>
         </section>
-<!-- ----------------------------- -->
+        <section>
+          <h1>Abstract vs Concrete types</h1>
+          <ul>
+            <li>PyObject_SetAttr</li>
+            <li>PySequence_GetItem</li>
+            <li>... vs ...</li>
+            <li>PyDict_GetItem</li>
+            <li>PyList_GetItem</li>
+            <li>PyTuple_GetItem</li>
+          </ul>
+        </section>
+        <section>
+          <pre><code>
+$ cython -a mod2.pyx
+$ xdg-open mod2.html
+          </code></pre>
+          <a href="https://asvetlov.github.io/optimization-kaunas-2017/mod3.html">HTML output</a>
+        </section>
+        <!-- ----------------------------- -->
         <section>
           <h1>Compiling</h1>
         </section>
