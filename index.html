@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru" >
+  <head>
+    <title>Open Source Library</title>
+    <meta name="description" content="">
+    <meta name="author" content="Andrew Svetlov">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Making OSS Library</h1>
+          <h2>How is it look like?</h2>
+          <p>
+            Andrew Svetlov
+            <p>
+              <small>http://asvetlov.blogspot.com</small><br>
+              <small>andrew.svetlov@gmail.com</small><br>
+              <small>http://asvetlov.github.io/oss-lviv-2017/</small>
+            </p>
+          </p>
+        </section>
+        <section>
+          <h2>Bio</h2>
+          <p>
+            <ul>
+              <li>Using Python for 17+ years</li>
+              <li>Python Core Developer</li>
+              <li>aio-libs</li>
+              <ul>
+                <li><i>aiohttp</i></li>
+                <li><i>aiopg</i></li>
+                <li><i>multidict</i></li>
+                <li>...</li>
+              </ul>
+            </ul
+          </p>
+        </section>
+        <section>
+          <section>
+            <h1>What to invent?</h1>
+            <img src="Young_Inventor.jpg"/>
+          </section>
+          <section>
+            <h2>The wheel?</h2>
+            <img src="Australian_cart.jpg" width="70%"/>
+          </section>
+          <section>
+            <h2>Non-round wheel</h2>
+            <img src="huge.jpeg" width="60%"/>
+          </section>
+        </section>
+        <section>
+          <h2>Life cycle</h2>
+          <ol>
+            <li>Create github project</li>
+            <li>Write code</li>
+            <li>Make it working</li>
+            <li>Publish on PyPI</li>
+            <li><b><i>Profit???</i></b></li>
+          </ol>
+        </section>
+        <section>
+          <h2>Criterias</h2>
+          <ul>
+            <li>Solve real life problem</li>
+            <li>Smooth learning curve</li>
+            <li>High quality</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>Testing</h1>
+          </section>
+          <section>
+            <h2><del>Manual</del></h2>
+            <img src="MonkeyTesting.jpg" width="70%"/>
+          </section>
+          <section>
+            <h2>All kinds of <ins>automated</ins> tests</h2>
+            <ul>
+              <li>Unit</li>
+              <li>Funcional</li>
+              <li>Integration</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Continuous integration</h2>
+            <ul>
+              <li>travis-ci.org</li>
+              <li>appveyor.com</li>
+              <li>circleci.com</li>
+            </ul>
+            <p class="fragment">Run tests on <b><i>every Pull Request</i></b></p>
+          </section>
+          <section>
+            <h2>Test coverage</h2>
+            <p>Strive to <b><i>100%</i></b> with branch cov enabled</p>
+            <p>Use <b><i>codecov.io</i></b> or <b><i>coveralls.io</i></b></p>
+            <p class="fragment">Collect data on <b><i>every CI run</i></b></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Documentation</h1>
+            <img src="documentation.jpg" width="70%"/>
+          </section>
+          <section>
+            <h1>Love to read</h1>
+            <h1 class="fragment">Hate to write</h1>
+          </section>
+          <section>
+            <h2>Use Sphinx</h2>
+            <img src="ultimate-swiss-army-knife1-640x533.jpg" width="60%"/>
+            <p>sphinx-doc.org</p>
+          </section>
+          <section>
+            <h2>Make narrative docs</h2>
+            <img src="ff_robot_large-660x494.jpg" width="70%"/>
+          </section>
+          <section>
+            <h2>Avoid autodocs</h2>
+            <img src="Depositphotos_60070281_original.jpg" width="70%"/>
+          </section>
+          <section>
+            <h2>Steal best ideas</h2>
+            <ul>
+              <li>docs.python.org</li>
+              <li>docs.djangoproject.com</li>
+              <li>flask.pocoo.org</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Community</h1>
+          </section>
+          <section>
+            <h2>Dream</h2>
+            <img src="python_sprint_instagram_2016.jpg" width="80%"/>
+          </section>
+          <section>
+            <h2>Hope</h2>
+            <img src="Elementary-school-students-raising-hands-in-classroom_.jpg" width="80%"/>
+          </section>
+          <section>
+            <h2>Reality</h2>
+            <img src="angry.teacher.canstockphoto4671339.jpg" width="80%"/>
+          </section>
+          <section>
+            <h2>Communication & feedback</h2>
+            <ul>
+              <li>Bug tracker</li>
+              <li>Google Group</li>
+              <li>Chats (gitter, slack, etc.)</li>
+              <li>Stack Overflow</li>
+              <li>Reddit :)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Source Code</h1>
+          </section>
+          <section>
+            <h1>Targets</h1>
+            <ul>
+              <li>Evolvement</li>
+              <li>Stability</li>
+              <li>Backward compatibility</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Public Facade</h2>
+            <img src="facade-7.jpg" width="70%"/>
+          </section>
+          <section>
+            <h2>Minimalistic API</h2>
+            <p>Hide implementation details</p>
+          </section>
+          <section>
+            <pre><code>
+class A:
+    attr1 = 1
+    attr2 = "val"
+
+    def meth(self): ...
+
+    def other(self): ...
+            </code></pre>
+          </section>
+          <section>
+            <pre><code>
+class A:
+    _attr1 = 1
+    _attr2 = "val"
+
+    @property
+    def attr1(self):
+        return self._attr1
+    @attr1.setter
+    def attr1(self, val):
+        if not isinstance(val, int):
+            raise TypeError(...)
+        self._attr1 = val
+    def meth(self): ...
+    def _other(self): ...
+            </code></pre>
+          </section>
+          <section>
+            <h2>Public API ≡ Documented API</h2>
+            <p>Throubles with feature documenting — <b>bad</b> smell.</p>
+          </section>
+          <section>
+            <h2>Readability</h2>
+            <ul>
+              <p>Write once — read permanently</p>
+              <p>Be Pythonic</p>
+              <p class="fragment">Say <b>no</b> to overusage of Python magic</p>
+            </ul>
+          </section>
+          <section>
+            <h2>Ducktyping is semi-evil</h2>
+            <img src="fake_duck.jpg" width="50%"/>
+          </section>
+          <section>
+            <h2>Final classes + interfaces</h2>
+            <h3>vs</h3>
+            <h2>Inheritance</h2>
+          </section>
+          <section>
+            <h2>Deprecation</h2>
+            <pre><code>
+import warnings
+
+def func():
+    warnings.warn("Use func2() instead",
+                  DeprecationWarning,
+                  stacklevel=2)
+    func2()
+
+def func2(): ...
+            </code></pre>
+          </section>
+          <section>
+            <h2>Contributors are power</h2>
+            <img src="contributors.jpg" width="60%"/>
+          </section>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+          <p>
+            Andrew Svetlov
+            <p>
+              <small>http://asvetlov.blogspot.com</small><br>
+              <small>andrew.svetlov@gmail.com</small><br>
+              <small>http://asvetlov.github.io/oss-lviv-2017/</small>
+            </p>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       slideNumber: true,
+       transition: 'slide', // none/fade/slide/convex/concave/zoom
+       // Optional reveal.js plugins
+       dependencies: [
+         { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+         { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+         { src: 'plugin/zoom-js/zoom.js', async: true },
+         { src: 'plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+
+  </body>
+</html>
