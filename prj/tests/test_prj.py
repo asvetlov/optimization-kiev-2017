@@ -22,6 +22,8 @@ class TestPython(TestCase, BasetTestMixin):
         _pyappend(*args)
 
 
-class TestCython(TestCase, BasetTestMixin):
-    def func(self, *args):
-        _append(*args)
+
+if _append is not None:
+    class TestCython(TestCase, BasetTestMixin):
+        def func(self, *args):
+            _append(*args)
